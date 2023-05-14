@@ -444,6 +444,10 @@
                 padding: 11px 0;
             }
 
+            .secondhalf img {
+                width:70%;
+            }
+
             .para2 {
                 padding: 0 0 0 15px;
             }
@@ -461,6 +465,10 @@
             .box-main {
                 padding-top: 54px;
                 flex-direction: column-reverse;
+            }
+
+            .secondhalf img {
+                width:80%;
             }
 
             .firsthalf {
