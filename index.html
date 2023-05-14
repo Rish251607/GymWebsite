@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Gym Final website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .background {
+            background: rgba(0, 0, 0, 0.7) url('gym4.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .logo {
+            width: 115px;
+            text-align: center;
+            color: white;
+        }
+
+        .Divinenav:hover {
+            color: violet;
+            cursor: context-menu;
+            text-decoration: underline;
+
+        }
+
+        .logo img {
+            width: 47px;
+            border: 2px solid grey;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+
+        .navlist {
+            display: flex;
+            align-items: center;
+            width: 50%;
+        }
+
+        .navlist li {
+            list-style: none;
+            padding: 25px 40px;
+        }
+
+        .navlist li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navlist li a:hover {
+            text-decoration: overline;
+            color: rgb(155, 149, 149);
+        }
+
+        .rightnav {
+            width: 50%;
+            text-align: right;
+        }
+
+        #Search {
+            padding: 4px;
+            font-size: 17px;
+            background: none;
+            border: 1px solid rgb(96, 94, 94);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            cursor: pointer;
+            margin: 7px 0;
+            background: none;
+            border: 1px solid white;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: rgb(145, 145, 146);
+            border: 1px solid black;
+        }
+
+        .btn-sm {
+            cursor: pointer;
+            margin-right: 31px;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px
+        }
+
+        .buttons {
+            margin-top: 19px;
+        }
+
+        .box-main {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 80%;
+            margin: auto;
+        }
+
+        .firstsection {
+            height: 100vh;
+        }
+
+        .firsthalf {
+            width: 38%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .text-big {
+            font-size: 22px;
+        }
+
+        .text-small {
+            font-size: 15px;
+        }
+
+        .secondhalf {
+            width: 31%;
+        }
+
+        .secondhalf img {
+            width: 56%;
+            display: block;
+            margin: auto;
+        }
+
+        /*About Divine fitness*/
+        .section {
+            height: 100%;
+            display: grid;
+            background-color: rgb(194, 190, 190);
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: 'Ubuntu', sans-serif;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .c {
+            display: flex;
+            padding: 0 125px;
+        }
+
+        .section-Left {
+            flex-direction: row-reverse;
+        }
+
+        .para {
+            padding: 0 192px;
+        }
+
+        .para2 {
+            padding: 0 0 0 85px;
+        }
+
+        .sectiontag {
+            padding: 8px 0;
+        }
+
+        .sectionSubtag {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .section-Left {
+            flex-direction: row-reverse;
+        }
+
+        .thumbnail {
+            display: flex;
+            align-items: center;
+        }
+
+        .thumbnail img {
+            width: 200px;
+            height: 180px;
+        }
+
+        /*Footer of divine fitness*/
+        footer {
+            background: #444;
+            box-sizing: border-box;
+            width: 100%;
+            font: bold 16px sans-serif;
+            text-align: left;
+            padding: 17px 60px 3px;
+            overflow: hidden;
+        }
+
+        /* Footer left */
+        .contact-left {
+            float: left;
+        }
+
+        .contact-left h3 {
+            color: #ffffff;
+            font-family: 'math';
+            font-size: 47px;
+            margin: 0 0 10px;
+        }
+
+        .contact-left h3 span {
+            color: #5383d3;
+
+        }
+
+        /* Footer links */
+        .footer-links {
+            color: #ffffff;
+            margin: 0 0 10px;
+            padding: 0;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .gym-detail {
+            color: #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .gym-detail-copy {
+            color: red;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer social icons */
+
+        .footer-icons {
+            margin-top: 40px;
+        }
+
+        .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+        /* Footer right */
+
+        .contact-form-right {
+            float: right;
+            display: flex;
+        }
+
+        .contact-form-right p {
+            display: inline-block;
+            vertical-align: top;
+            margin: 3px 42px 0 0;
+            color: #ffffff;
+        }
+
+        /* The contact form */
+        .form {
+            display: inline-block;
+        }
+
+        .contact-form-group {
+            width: 89%;
+            margin-bottom: 10px;
+        }
+
+        #name {
+            color: white;
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #1f2022;
+            box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+            margin-bottom: 3px;
+            margin-right: 48px;
+            border: 1px solid black;
+        }
+
+        #phone {
+            color: white;
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #1f2022;
+            box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+            margin-bottom: 3px;
+            margin-right: 48px;
+            border: 1px solid black;
+        }
+
+        #email {
+            color: white;
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #1f2022;
+            box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+            margin-bottom: 3px;
+            margin-right: 48px;
+            border: 1px solid black;
+        }
+
+        textarea {
+            color: white;
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #1f2022;
+            box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+            margin-bottom: 3px;
+            margin-right: 48px;
+            border: 1px solid black;
+            height: 100px;
+        }
+
+        .footer ::-webkit-input-placeholder {
+            color: #5c666b;
+        }
+
+        .footer ::-moz-placeholder {
+            color: #5c666b;
+            opacity: 1;
+        }
+
+        .footer :-ms-input-placeholder {
+            color: #5c666b;
+        }
+
+        .btn-sm2 {
+            border-color: black;
+            color: rgb(6, 5, 5);
+            background-color: #754d4d;
+        }
+
+        .btn-sm2:hover {
+            background-color: rgb(187, 190, 190);
+        }
+
+        .burger {
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            display: none;
+            top: 15px;
+        }
+
+        .line {
+            width: 33px;
+            background-color: white;
+            height: 3px;
+            margin: 5px 3px;
+        }
+
+        /* If you don't want the footer to be responsive, remove these media queries */
+        @media only screen and (max-width:1200px) {
+            .navlist {
+                flex-direction: column;
+            }
+
+            .navbar {
+                flex-direction: column;
+                height: 470px;
+                transition: all 0.7s ease-out;
+            }
+
+            .rightnav {
+                text-align: center;
+            }
+
+            #search {
+                width: 100%;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .h-nav {
+                height: 72px;
+            }
+
+            .v-class {
+                opacity: 0;
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .para {
+                padding: 0 77px;
+            }
+
+            .thumbnail img {
+                width: 135px;
+                height: 119px;
+            }
+
+            footer {
+                display: grid;
+                justify-content: center;
+            }
+        }
+
+        @media only screen and (max-width: 850px) {
+            .section {
+                padding: 11px 0;
+            }
+
+            .para2 {
+                padding: 0 0 0 15px;
+            }
+
+            .c {
+                padding: 0 19px;
+            }
+
+            .para {
+                padding: 0 24px;
+            }
+        }
+
+        @media only screen and (max-width: 595px) {
+            .box-main {
+                padding-top: 54px;
+                flex-direction: column-reverse;
+            }
+
+            .firsthalf {
+                width: 62%;
+                padding-top: 23px;
+            }
+        }
+
+        @media only screen and (max-width: 410px) {
+            .thumbnail img {
+                width: 114px;
+                height: 87px;
+            }
+
+            .firsthalf {
+                width: 86%;
+            }
+
+            .secondhalf {
+                width: 56%;
+            }
+        }
+
+        @media only screen and (max-width: 307px) {
+            .firsthalf {
+                padding-top: 0%;
+            }
+
+            .firstsection {
+                width: 300px;
+            }
+
+            .section {
+                width: 300px;
+            }
+
+            .navbar {
+                width: 300px;
+            }
+
+            footer {
+                width: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <session id="home">
+        <nav class="navbar background h-nav">
+            <ul class="navlist v-class">
+                <div class="logo"><img src="dumbell-2.jpg" alt="Logo">
+                    <div class="Divinenav">Divine fitness</div>
+                </div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+            <div class="rightnav v-class">
+                <input type="text" name="Search" id="Search" placeholder="Search">
+                <button class="btn btn-sm">Search</button>
+            </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </session>
+    <section class="background firstsection">
+        <div class="box-main">
+            <div class="firsthalf">
+                <p class="text-big">"Strength doesn't come from what you can do, it comes from overcoming the things
+                    you
+                    once thought you couldn't."
+                </p>
+                <p class="text-small">Transform your body, challenge your limits, and unleash your inner athlete
+                    with us
+                    at Divine Fitness.
+                </p>
+                <div class="buttons">
+                    <button class="btn">Subscribe</button>
+                    <button class="btn">Watch Videos</button>
+                </div>
+            </div>
+            <div class="secondhalf">
+                <img src="Divine.png " alt="Bodybuilder">
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="para">
+            <p class="sectiontag text-big" id="about"><b>Divine Fitness: The Ultimate Destination for Fitness
+                    Enthusiasts:</b></p>
+            <p class="sectionSubtag text-small">Divine Fitness is a well-established gym that has been operating for
+                many years, catering to the fitness needs of individuals from all walks of life. The gym is known
+                for its high-quality facilities, expert trainers, and comprehensive programs, making it a top choice
+                for fitness enthusiasts. <br> <br>
+
+                One of the key features that sets Divine Fitness apart from other gyms is its team of experienced
+                and knowledgeable trainers. These trainers are passionate about fitness and work closely with
+                clients to help them achieve their fitness goals. They take the time to understand each individual's
+                needs and tailor their programs accordingly, ensuring that they get the best results possible. <br>
+                <br>
+
+                In addition to its expert trainers, Divine Fitness boasts a range of cutting-edge equipment and
+                facilities. The gym has a dedicated cardio section, equipped with treadmills, ellipticals, and
+                stationary bikes, which are perfect for anyone looking to improve their cardiovascular health and
+                burn calories. The gym also has a well-equipped weights section, which includes a variety of
+                machines and free weights, catering to individuals looking to build muscle and strength. <br> <br>
+
+                For those who are serious about their fitness goals, Divine Fitness also offers a range of original
+                gym supplements. These supplements are designed to aid in muscle growth and recovery, ensuring that
+                clients get the most out of their workouts. The gym carefully selects these supplements to ensure
+                that they are safe, effective, and of the highest quality. <br> <br>
+
+                Moreover, Divine Fitness has a gym diet canteen that serves healthy and nutritious meals. This
+                canteen offers a variety of options, from protein-packed meals to fresh juices and smoothies,
+                catering to the needs of all gym-goers. The meals are carefully prepared using high-quality
+                ingredients, ensuring that clients get the nutrients they need to fuel their bodies. <br> <br>
+
+                When it comes to fitness, Divine Fitness is not just a gym; it is a lifestyle. The gym's commitment
+                to a holistic approach to wellness is evident in everything it does. It recognizes that fitness is
+                not just about looking good; it's about feeling good, both physically and mentally. Whether clients
+                are looking to lose weight, build muscle, or improve their overall well-being, Divine Fitness has
+                the expertise and resources to help them achieve their goals. <br> <br>
+
+                In conclusion, Divine Fitness is a gym that stands out from the rest. Its expert trainers,
+                state-of-the-art facilities, and comprehensive programs make it the ultimate destination for anyone
+                looking to improve their fitness and overall well-being. With its focus on a holistic approach to
+                wellness, Divine Fitness is more than just a gym; it's a lifestyle. So, if you're looking to take
+                your fitness to the next level, look no further than Divine Fitness.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="para">
+            <p class="sectiontag text-big" id="services"><b>Divine Fitness: Services</b></p>
+            <p class="sectionSubtag text-small">Divine Fitness is a premier fitness center that offers a range of
+                services, including gym, yoga, and cardio. The center is designed to cater to the needs of
+                individuals of all fitness levels, from beginners to experienced athletes. The staff is highly
+                trained and passionate about fitness, and they are dedicated to helping each individual reach their
+                goals. Here are some of the best services offered by Divine Fitness. <br></p>
+
+            <div class="text-big">1.Gym:</div>
+            <p>Divine Fitness has a state-of-the-art gym equipped with top-of-the-line equipment. The gym is
+                spacious, clean, and well-maintained, providing a comfortable environment for a workout. The gym is
+                open 24 hours a day, seven days a week, providing members with the flexibility to work out whenever
+                they want. The equipment is regularly serviced and updated, ensuring that members have access to the
+                latest fitness technology.</p>
+        </div>
+        <div class="c">
+            <div class="para2">
+                <p class="sectiontag text-big">chest:</p>
+                <p class="sectionSubtag text-small">The chest is one of the major muscle groups in the upper body,
+                    and a
+                    strong chest is essential for overall upper body strength. The chest muscles can be targeted
+                    through
+                    exercises such as bench press, incline press, decline press, chest fly, and push-ups. These
+                    exercises can be performed using free weights such as dumbbells and barbells or weight machines
+                    that
+                    are specifically designed to target the chest muscles.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="chest.png" alt="">
+
+            </div>
+        </div>
+        <div class="c section-Left">
+            <div class="para2">
+                <p class="sectiontag text-big">Back:</p>
+                <p class="sectionSubtag text-small">The back is another major muscle group in the upper body, and a
+                    strong back is essential for good posture and overall upper body strength. The back muscles can
+                    be
+                    targeted through exercises such as lat pulldowns, seated rows, bent-over rows, and pull-ups.
+                    These
+                    exercises can be performed using free weights or weight machines that are specifically designed
+                    to
+                    target the back muscles.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="back.png" width="255" height="185" alt="">
+            </div>
+        </div>
+        <div class="c">
+            <div class="para2">
+                <p class="sectiontag text-big">Biceps:</p>
+                <p class="sectionSubtag text-small">The biceps are the muscles on the front of the upper arm and are
+                    essential for many upper body movements. The biceps can be targeted through exercises such as
+                    bicep
+                    curls, hammer curls, and preacher curls. These exercises can be performed using free weights
+                    such as
+                    dumbbells and barbells or weight machines that are specifically designed to target the biceps.
+                </p>
+            </div>
+            <div class="thumbnail">
+                <img src="biceps.png" width="255" height="185" alt="">
+            </div>
+        </div>
+        <div class="c section-Left">
+            <div class="para2">
+                <p class="sectiontag text-big">Triceps:</p>
+                <p class="sectionSubtag text-small">The triceps are the muscles on the back of the upper arm and are
+                    essential for pushing movements. The triceps can be targeted through exercises such as tricep
+                    extensions, dips, and close-grip bench press. These exercises can be performed using free
+                    weights or
+                    weight machines that are specifically designed to target the triceps.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="triceps.png" width="255" height="185" alt="">
+            </div>
+        </div>
+        <div class="c">
+            <div class="para2">
+                <p class="sectiontag text-big">Shoulder:</p>
+                <p class="sectionSubtag text-small">The shoulders are another major muscle group in the upper body
+                    and
+                    are essential for many upper body movements. The shoulder muscles can be targeted through
+                    exercises
+                    such as shoulder press, lateral raise, front raise, and rear delt fly. These exercises can be
+                    performed using free weights such as dumbbells and barbells or weight machines that are
+                    specifically
+                    designed to target the shoulder muscles.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="shoulder.png" width="255" height="185" alt="">
+            </div>
+        </div>
+        <div class="c section-Left">
+            <div class="para2">
+                <p class="sectiontag text-big">Legs:</p>
+                <p class="sectionSubtag text-small">The legs are the largest muscle group in the body and are
+                    essential
+                    for overall lower body strength. The leg muscles can be targeted through exercises such as
+                    squats,
+                    lunges, leg press, leg extensions, and leg curls. These exercises can be performed using free
+                    weights or weight machines that are specifically designed to target the leg muscles.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="legs.png" width="255" height="185" alt="">
+            </div>
+        </div>
+        <div class="c">
+            <div class="para2">
+                <p class="sectiontag text-big">Abs:</p>
+                <p class="sectionSubtag text-small">The abdominal muscles are located in the midsection of the body
+                    and are essential for core strength and stability. The abs can be targeted through exercises
+                    such as crunches, sit-ups, planks, and leg raises. These exercises can be performed without any
+                    equipment or using equipment such as medicine balls or stability balls</p>
+            </div>
+            <div class="thumbnail">
+                <img src="abs.png" width="255" height="185" alt="">
+            </div>
+        </div>
+        <div class="para">
+            <p class="sectiontag text-big" id="about"><b>2.Yoga:</b></p>
+            <p class="sectionSubtag text-small">Divine Fitness offers a variety of yoga classes to suit the
+                needs of individuals of all levels. Hatha yoga is a gentle yoga practice that focuses on
+                relaxation and flexibility. Vinyasa yoga is a more dynamic yoga practice that focuses on
+                strength and flexibility. Yin yoga is a slow-paced yoga practice that focuses on deep relaxation
+                and flexibility. The classes are led by experienced instructors who provide individualized
+                attention to each participant. The classes are suitable for individuals of all levels, from
+                beginners to advanced yogis.</p>
+        </div>
+
+        <div class="para">
+            <p class="sectiontag text-big" id="about"><b>3.Cardio:</b></p>
+            <p class="sectionSubtag text-small">Cardio is an essential component of any fitness program, and
+                Divine Fitness offers a range of cardio equipment, including treadmills, ellipticals, and
+                stationary bikes. The cardio area is spacious and well-ventilated, providing a comfortable
+                environment for a workout. The equipment is also equipped with state-of-the-art technology, such
+                as heart rate monitors, to help individuals track their progress. The cardio area is a great
+                place to get your heart rate up and burn calories.</p>
+        </div>
+
+        <div class="para">
+            <p class="sectiontag text-big" id="about"><b>4.Personal Training:</b></p>
+            <p class="sectionSubtag text-small">Personal training at Divine Fitness provides individuals with
+                personalized fitness plans and one-on-one coaching. The personal trainers are highly qualified
+                and experienced, and they work closely with each individual to develop a program that meets
+                their specific needs and goals. Personal training is an excellent option for individuals who are
+                new to fitness or who want to take their fitness to the next level. The personal trainers will
+                provide guidance on proper form, technique, and nutrition, ensuring that you are getting the
+                most out of your workout.</p>
+        </div>
+    </section>
+    <session id="contact">
+        <footer>
+            <div class="contact-left">
+                <h3>Divine<span>Fitness</span></h3>
+                <p class="footer-links">
+                    <a href="#">Feel free to</a>
+                    ·
+                    <a href="#">Contact Us.</a>
+                </p>
+                <p class="gym-detail">Phone No: 123-456-7890</p>
+                <p class="gym-detail">Email: Divinefitness@gmail.com</p>
+                <p class="gym-detail-copy">Copyright &copy; all right reserved.</p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+            </div>
+            <div class="contact-form-right">
+                <p>Share Your Feedback:</p>
+                <form action="" method="post">
+                    <div class="contact-form-group">
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button class="btn btn-sm2">Submit:</button>
+                </form>
+            </div>
+        </footer>
+        </section>
+        <script>
+            burger = document.querySelector('.burger')
+            navbar = document.querySelector('.navbar')
+            navlist = document.querySelector('.navlist')
+            rightnav = document.querySelector('.rightnav')
+
+            burger.addEventListener('click', () => {
+                rightnav.classList.toggle('v-class');
+                navlist.classList.toggle('v-class');
+                navbar.classList.toggle('h-nav');
+            })
+        </script>
+</body>
+
+</html>
